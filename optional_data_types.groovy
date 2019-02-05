@@ -1,5 +1,6 @@
 #! /usr/bin/env groovy
 
+// Each primitive data type in Java has a corresponding wrapper class
 byte b = 10
 println(b.getClass().getName())
 
