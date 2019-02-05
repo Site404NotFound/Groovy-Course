@@ -1,6 +1,7 @@
 #! /usr/bin/env groovy
 
 // Each primitive data type in Java has a corresponding wrapper class
+// In Java there are 17 data types (8 primitive, 8 corresponding wrapper classes, and string)
 byte b = 10
 println(b.getClass().getName())
 
