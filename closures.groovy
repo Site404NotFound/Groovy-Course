@@ -58,5 +58,46 @@ Random rand = new Random( )
 def foo = {
   println(it)
 }
-
 foo("James")
+
+def noparams = {
+  ->
+    println ("No params...")
+}
+noparams()
+
+
+def hello_again = {
+  String first, String last ->
+    println("Hello, $first $last")
+}
+hello_again("James", "Hippler")
+
+// Default values
+def default_values = {
+  String greet = "Howdy", String name ->
+    println("$greet, $name")
+}
+default_values("James")
+
+// Var-arg
+Closure concat = {
+  String... args ->
+    args.join('')
+}
+
+println(concat("abc","def"))
+println(concat("abc","def","123","456"))
+
+Void someMethod(Closure c) {
+  println("...")
+  println(c.maximumNumberOfParameters)
+  println(c.parameterTypes)
+}
+
+Closure someClosure = {
+  int x, int y ->
+    x + y
+}
+
+someMethod(someClosure)
