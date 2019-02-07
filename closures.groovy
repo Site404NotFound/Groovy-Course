@@ -54,3 +54,9 @@ Random rand = new Random( )
 3.times {
   println(rand.nextInt())
 }
+
+def foo = {
+  println(it)
+}
+
+foo("James")
